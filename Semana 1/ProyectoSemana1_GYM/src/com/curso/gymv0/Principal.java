@@ -5,6 +5,8 @@ public class Principal {
 	public static void main(String[] args) {
 System.out.println("----GYM SMARTFIT----");
 System.out.println("     Bienvenid@     ");
+System.out.println("--------------------");
+
 
 	}
 

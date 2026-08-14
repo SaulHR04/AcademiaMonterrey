@@ -14,7 +14,7 @@ public PlanUsuario(String nombre, double precio, boolean PermisoSPA) {
 }
 
 
-public boolean isPermisoSPA(){return PermisoSPA;}
+public boolean getPermisoSPA(){return PermisoSPA;}
 public double getPrecio() {return precio;}     //Getters no necesito Setters ya que es final
 public String getNombre() {return nombre;}
 
