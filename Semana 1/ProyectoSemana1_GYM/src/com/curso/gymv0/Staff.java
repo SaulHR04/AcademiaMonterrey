@@ -1,5 +1,5 @@
 package com.curso.gymv0;
 
-public class Staff {
+public class Staff extends Usuario{
 
 }
