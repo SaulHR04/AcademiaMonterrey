@@ -16,7 +16,6 @@ public int matricula() {return matricula; }
 public String getNombre() {return nombre;}
 
 public void permisosUsuario() {
-	System.out.println("Usuario:" + getNombre()+ " Acceso exitoso");
 }
 
 }

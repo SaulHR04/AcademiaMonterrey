@@ -14,9 +14,10 @@ public PlanUsuario getPlan() {return plan;}
 public String CancelacionSolicitar() {
 	return fidelidad.CancelarSiNo();
 }
+
 @Override
 public void permisosUsuario() {
-	System.out.println("Cliente:"+ getNombre()+ " Plan activo: "+ plan.getNombre()+"Precio:"+ plan.getPrecio() + "SPA:" + plan.getPermisoSPA() );
+	System.out.println("| Cliente: "+ getNombre()+ "| Plan activo: "+ plan.getNombre()+" Precio: "+ plan.getPrecio() + " | SPA: " + plan.getPermisoSPA() + " | Fidelidad: " + plan.getfidelidad() );
 }
 	
 	

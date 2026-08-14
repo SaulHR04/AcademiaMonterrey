@@ -9,6 +9,6 @@ public class Entrenador extends Usuario {
 	
 @Override
 public void permisosUsuario() {
-	System.out.println("Nombre:" + getNombre() + "Permisos: Entrenar Usuarios" );
+	System.out.println("Nombre:" + getNombre() + " | Entrenar Usuarios y Acceso a las instalaciónes |" );
 }
 }
