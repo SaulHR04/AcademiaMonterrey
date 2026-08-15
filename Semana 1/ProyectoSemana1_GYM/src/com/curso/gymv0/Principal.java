@@ -30,15 +30,46 @@ listaUsuarios.add(c3);
 listaUsuarios.add(co);
 listaUsuarios.add(st);
 listaUsuarios.add(lp);
-listaUsuarios.add(us);
+
 
 System.out.println("Cantidad de usuarios en sistema: |" + listaUsuarios.size() + "|");
 
-System.out.println("---Permisos por usuario---");
+System.out.println("---Permisos por usuario--- ");
 for(Usuario u : listaUsuarios)
 {
 	u.permisosUsuario();
 	}
-	}
+System.out.println("\n---Cancelar plan---");
 
+System.out.println("Usuario: " + c1.getNombre() + "Posibilidad de cancelacion: |" + c1.CancelacionSolicitar());
+System.out.println("Usuario: " + c2.getNombre() + "Posibilidad de cancelacion: |" + c2.CancelacionSolicitar());
+System.out.println("Usuario: " + c3.getNombre() + "Posibilidad de cancelacion: |" + c3.CancelacionSolicitar());
+
+{
+	System.out.println("---Buscar por plan Black---");
+
+ for (Usuario u : listaUsuarios) {
+ if (u instanceof Cliente c && c.getPlan().getNombre().equals("Black")) {
+ System.out.println("  Usuario cuenta con plan black: " + c.getNombre());}}
+ 
+ System.out.println("---Buscar por plan Smart---");
+
+ for (Usuario u : listaUsuarios) {
+ if (u instanceof Cliente c && c.getPlan().getNombre().equals("Smart")) {
+ System.out.println("  Usuario cuenta con plan black: " + c.getNombre());}}
+ 
+ System.out.println("---Buscar por plan fit---");
+
+ for (Usuario u : listaUsuarios) {
+ if (u instanceof Cliente c && c.getPlan().getNombre().equals("Fit")) {
+ System.out.println("  Usuario cuenta con plan black: " + c.getNombre());}}
 }
+	}
+}
+
+
+
+
+	
+
+

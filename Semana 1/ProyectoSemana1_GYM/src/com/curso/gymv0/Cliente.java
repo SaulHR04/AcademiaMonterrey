@@ -17,7 +17,7 @@ public String CancelacionSolicitar() {
 
 @Override
 public void permisosUsuario() {
-	System.out.println("| Cliente: "+ getNombre()+ "| Plan activo: "+ plan.getNombre()+" Precio: "+ plan.getPrecio() + " | SPA: " + plan.getPermisoSPA() + " | Fidelidad: " + plan.getfidelidad() );
+	System.out.println("Matricula |"+ id +"| Cliente: "+ getNombre()+ "| Plan activo: "+ plan.getNombre()+" Precio: "+ plan.getPrecio() + " | SPA: " + plan.getPermisoSPA() + " | Fidelidad: " + plan.getfidelidad()+"\n");
 }
 	
 	

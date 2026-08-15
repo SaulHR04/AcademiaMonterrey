@@ -8,10 +8,10 @@ public CancelarPlan(boolean fidelidad) {
 }
 public String CancelarSiNo() {
 	if (fidelidad) {
-		return "Tienes un plan de 12 meses de fidelidad";
+		return " No es posible --Tienes un plan de 12 meses de fidelidad--\n";
 		
 	} else {			//comprobar si tiene fidelidad o no, cancelar o no cancelar el plan
-		return " Plan cancelado ";
+		return " Si! es posible cancelar tu plan. \n ";
 	}
 }
 }

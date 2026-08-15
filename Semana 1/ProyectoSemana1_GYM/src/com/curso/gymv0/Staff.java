@@ -7,7 +7,7 @@ public class Staff extends Usuario{
 	}
 @Override
 public void permisosUsuario() {
-	System.out.println("Staff:" + getNombre()+ " |Totalidad de permisos|");
+	System.out.println("Matricula |"+ id +"| Staff:" + getNombre()+ " |Totalidad de permisos|\n");
 
 }
 public void Sistema(){

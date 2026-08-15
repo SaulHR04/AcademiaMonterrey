@@ -6,6 +6,6 @@ public class Limpiador extends Usuario {
 		super(nombre);
 	}
 public void permisosUsuario() {
-	System.out.println("Limpieza: "+ getNombre() + "|Acceso a instalaciones|");
+	System.out.println("Matricula | "+id +"|Limpieza: "+ getNombre() + "|Acceso a instalaciones|");
 }
 }
