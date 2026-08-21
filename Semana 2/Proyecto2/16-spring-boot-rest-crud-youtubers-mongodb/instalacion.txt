@@ -1,0 +1,26 @@
+Descarga imange e Instalación Contenedor
+docker run --name mongo-8 -p 27017:27017 -d mongo:8
+
+Cliente Mongo Db
+Opcion 1) https://www.mongodb.com/products/platform/atlas-database
+
+Opcion 2) 
+# 1. Crear una red y meter a mongo-8 en ella
+docker network create mongo-net
+docker network connect mongo-net mongo-8
+
+# 2. Levantar mongo-express
+docker run --name mongo-express --network mongo-net -p 8082:8081 \
+  -e ME_CONFIG_MONGODB_URL="mongodb://mongo-8:27017/" \
+  -e ME_CONFIG_BASICAUTH=false \
+  -d mongo-express
+
+Para Windows
+docker run --name mongo-express `
+  --network mongo-net `
+  -p 8081:8081 `
+  -e ME_CONFIG_MONGODB_URL="mongodb://mongo-8:27017/" `
+  -e ME_CONFIG_BASICAUTH=false `
+  -d mongo-express  
+
+Luego abren http://localhost:8082
