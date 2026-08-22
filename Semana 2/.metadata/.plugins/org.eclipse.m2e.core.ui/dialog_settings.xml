@@ -62,6 +62,8 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 2\16-spring-boot-rest-crud-employee-with-spring-data-jpa"/>
+			<item value="C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 2\16-spring-boot-rest-crud-employee-mongodb"/>
 			<item value="C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 2\Proyecto2\16-spring-boot-rest-crud-youtubers-mongodb"/>
 			<item value="C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 2\Proyecto1\16-spring-boot-rest-crud-youtubers-with-spring-data-jpa"/>
 		</list>
