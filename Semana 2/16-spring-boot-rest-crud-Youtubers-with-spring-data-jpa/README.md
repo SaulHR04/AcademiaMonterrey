@@ -29,3 +29,13 @@ Proyecto realizado con la version SQL
 2. Importado de phpmyadmin (en carpeta)
 
 ### URL
+3.
+ * `http://localhost:8080/api/Youtubers
+### EndPoints
+
+4.
+Get: GET /api/youtubers , GET /api/youtubers/{youtuberId}
+POST: POST /api/youtubers
+PUT: PUT /api/youtubers
+DELETE: DELETE /api/youtubers/{youtuberId}
+
