@@ -1,0 +1,33 @@
+$BASE = "http://localhost:8081/api/Youtubers"
+
+Write-Host "=========================================" -ForegroundColor Cyan
+Write-Host "   PRUEBAS CRUD REST API - YOUTUBERS" -ForegroundColor Cyan
+Write-Host "=========================================" -ForegroundColor Cyan
+
+#POST 
+$bodyLuisito = '{"nombre":"Luisito Comunica","tipo_contenido":"Viajes","seguidores":"43M","videos_totales":1200,"equipo_de_trabajo":"Produccion","funas":2,"tiempo_youtube":"12 anos","monetizacion":true}'
+Write-Host "`n[POST] Creando a Luisito Comunica..." -ForegroundColor Yellow
+$nuevoLuisito = Invoke-RestMethod -Method POST -Uri $BASE -Body $bodyLuisito -ContentType "application/json; charset=utf-8"
+$ID_Luisito = $nuevoLuisito.id
+Write-Host "  ➜ ObjectId asignado: $ID_Luisito" -ForegroundColor Green
+
+#POST
+$bodyRubius = '{"nombre":"ElRubiusOMG","tipo_contenido":"Gaming","seguidores":"40M","videos_totales":850,"equipo_de_trabajo":"Solista","funas":1,"tiempo_youtube":"13 anos","monetizacion":true}'
+Write-Host "`n[POST] Creando a ElRubiusOMG..." -ForegroundColor Yellow
+$nuevoRubius = Invoke-RestMethod -Method POST -Uri $BASE -Body $bodyRubius -ContentType "application/json; charset=utf-8"
+$ID_Rubius = $nuevoRubius.id
+Write-Host "  ➜ ObjectId asignado: $ID_Rubius" -ForegroundColor Green
+
+
+Write-Host "`n[GET] Obteniendo todos..." -ForegroundColor Yellow
+$todos = Invoke-RestMethod -Method GET -Uri $BASE
+$todos | ConvertTo-Json -Depth 3
+
+#DELETE
+Write-Host "`n[DELETE] Eliminando a ElRubius..." -ForegroundColor Red
+Invoke-RestMethod -Method DELETE -Uri "$BASE/$ID_Rubius"
+Write-Host "  ➜ Eliminado con exito." -ForegroundColor Green
+
+#GET 
+Write-Host "`n[GET FINAL] Lista restante:" -ForegroundColor Yellow
+Invoke-RestMethod -Method GET -Uri $BASE | ConvertTo-Json -Depth 3
