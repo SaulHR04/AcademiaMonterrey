@@ -21,8 +21,8 @@ public class Youtubers {
     @Column(name="tipo_contenido")
     private String tipo_contenido;
     
-    @Column(name="videos_totales")
-    private int videos_totales;
+    @Column(name="videos_total")
+    private int videos_total;
     
     @Column(name="equipo_de_trabajo")
     private String equipo_de_trabajo;
@@ -33,25 +33,13 @@ public class Youtubers {
     
     @Column(name="monetizacion")
     private boolean monetizacion;
+    @Column(name="canal_youtube")
+    private String canal_youtube;
 
     // define constructors
     public Youtubers() {
 
     }
-
-	public Youtubers(int id, String nombre, String seguidores, String tipo_contenido, int videos_totales,
-			String equipo_de_trabajo, int funas, String tiempo_youtube, boolean monetizacion) {
-		super();
-		this.id = id;
-		this.nombre = nombre;
-		this.seguidores = seguidores;
-		this.tipo_contenido = tipo_contenido;
-		this.videos_totales = videos_totales;
-		this.equipo_de_trabajo = equipo_de_trabajo;
-		this.funas = funas;
-		this.tiempo_youtube = tiempo_youtube;
-		this.monetizacion = monetizacion;
-	}
 
 	public int getId() {
 		return id;
@@ -85,12 +73,12 @@ public class Youtubers {
 		this.tipo_contenido = tipo_contenido;
 	}
 
-	public int getVideos_totales() {
-		return videos_totales;
+	public int getVideos_total() {
+		return videos_total;
 	}
 
-	public void setVideos_totales(int videos_totales) {
-		this.videos_totales = videos_totales;
+	public void setVideos_total(int videos_total) {
+		this.videos_total = videos_total;
 	}
 
 	public String getEquipo_de_trabajo() {
@@ -125,7 +113,30 @@ public class Youtubers {
 		this.monetizacion = monetizacion;
 	}
 
-   
+	public String getCanal_youtube() {
+		return canal_youtube;
+	}
+
+	public void setCanal_youtube(String canal_youtube) {
+		this.canal_youtube = canal_youtube;
+	}
+
+	public Youtubers(int id, String nombre, String seguidores, String tipo_contenido, int videos_total,
+			String equipo_de_trabajo, int funas, String tiempo_youtube, boolean monetizacion, String canal_youtube) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.seguidores = seguidores;
+		this.tipo_contenido = tipo_contenido;
+		this.videos_total = videos_total;
+		this.equipo_de_trabajo = equipo_de_trabajo;
+		this.funas = funas;
+		this.tiempo_youtube = tiempo_youtube;
+		this.monetizacion = monetizacion;
+		this.canal_youtube = canal_youtube;
+	}
+
+
 
     
 }
