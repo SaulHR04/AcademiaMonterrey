@@ -10,9 +10,11 @@ public class Principal {
         Youtubers ibai = Productor.obtenerYoutuberEquipado("Ibai", "estudio");
         ibai.grabarVideo();
 
-        System.out.println("---------------------------------------------------------");
 
         Youtubers auron = Productor.obtenerYoutuberEquipado("Auronplay", "habitacion");
         auron.grabarVideo();
+        
+        Youtubers Vegetta777 = Productor.obtenerYoutuberEquipado("Vegetta", "estudio");
+        Vegetta777.grabarVideo();
     }
 }
