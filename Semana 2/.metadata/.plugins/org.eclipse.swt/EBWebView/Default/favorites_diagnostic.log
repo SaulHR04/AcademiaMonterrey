@@ -146,3 +146,24 @@
 2026-08-22 22:22:16.116: [INFO] BookmarkModelLoaded, ids_reassigned: 0
 2026-08-22 22:22:16.116: [INFO] BookmarksLoadDropped droppedNodes=0
 2026-08-22 22:22:16.116: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-22 22:24:18.492: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-24 21:50:26.025: [INFO] CurrentProfilePath: C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 2\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-24 21:50:26.025: [INFO] Profiles total count: 1
+2026-08-24 21:50:26.025: [INFO] Profile: name=Perfil 1 path=C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 2\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-08-22T21:25:54.539Z
+2026-08-24 21:50:26.025: [INFO] LastUsedProfileDir: C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 2\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-24 21:50:26.025: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 2\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-08-22T21:25:54.539Z
+2026-08-24 21:50:26.025: [INFO] OnDoneLoading sync enabled: 0
+2026-08-24 21:50:26.025: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-24 21:50:26.025: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-24 21:50:26.025: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-24 21:50:31.260: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-24 21:53:04.073: [INFO] CurrentProfilePath: C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 2\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-24 21:53:04.073: [INFO] Profiles total count: 1
+2026-08-24 21:53:04.074: [INFO] Profile: name=Perfil 1 path=C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 2\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-08-24T21:50:29.976Z
+2026-08-24 21:53:04.074: [INFO] LastUsedProfileDir: C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 2\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-24 21:53:04.074: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 2\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-08-24T21:50:29.976Z
+2026-08-24 21:53:04.074: [INFO] OnDoneLoading sync enabled: 0
+2026-08-24 21:53:04.074: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-24 21:53:04.074: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-24 21:53:04.074: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-25 03:59:21.268: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
