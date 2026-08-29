@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sensor en vivo — WebFlux 02</title>
+<style>
+  :root{ --bg:#0f1417; --panel:#171e22; --rule:#26313a; --ink:#e6edee; --dim:#8d9ca0;
+         --ok:#69bf7a; --hot:#e8908b; --accent:#5fc0b4; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:2rem 1.25rem}
+  .wrap{max-width:960px;margin:0 auto}
+  h1{font-size:1.5rem;margin:0 0 .3rem}
+  p.lede{color:var(--dim);margin:0 0 1.6rem;max-width:60ch}
+  .cols{display:grid;gap:1rem;grid-template-columns:1fr}
+  @media(min-width:760px){.cols{grid-template-columns:1fr 1fr}}
+  .panel{background:var(--panel);border:1px solid #26313a;border-radius:10px;padding:1rem 1.1rem;min-height:340px}
+  .panel h2{font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 .2rem}
+  .panel .sub{font-size:.78rem;color:var(--dim);margin:0 0 .9rem;font-family:ui-monospace,Menlo,monospace}
+  button{font:inherit;font-size:.85rem;background:#1f2a30;color:var(--ink);border:1px solid #33414a;
+         border-radius:6px;padding:.4rem .8rem;cursor:pointer;margin-bottom:.8rem}
+  button:hover{border-color:var(--accent);color:var(--accent)}
+  button:disabled{opacity:.5;cursor:default}
+  ol{list-style:none;margin:0;padding:0;font-family:ui-monospace,Menlo,monospace;font-size:.82rem}
+  li{padding:.28rem .5rem;border-bottom:1px solid #212b31;display:flex;justify-content:space-between;gap:1rem}
+  li:last-child{border-bottom:0}
+  li.nueva{animation:pop .5s ease}
+  @keyframes pop{from{background:#1d3b36}to{background:transparent}}
+  .t{color:var(--ok)} .t.hot{color:var(--hot);font-weight:600}
+  .estado{font-size:.76rem;color:var(--dim);margin-top:.7rem;font-family:ui-monospace,Menlo,monospace}
+  .spin{display:inline-block;animation:sp 1s linear infinite}
+  @keyframes sp{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>El mismo <code>Flux</code>, servido de dos formas</h1>
+  <p class="lede">Dale a los dos botones a la vez y mira la diferencia. Los dos endpoints
+  usan <strong>exactamente el mismo servicio</strong> y devuelven <strong>el mismo tipo</strong>
+  (<code>Flux&lt;Lectura&gt;</code>). Lo único que cambia es el <code>produces</code> del controlador.</p>
+
+  <div class="cols">
+    <div class="panel">
+      <h2>A · application/json</h2>
+      <p class="sub">GET /api/lecturas</p>
+      <button id="bA">Pedir las 5 lecturas</button>
+      <ol id="listaA"></ol>
+      <p class="estado" id="estadoA">en reposo</p>
+    </div>
+
+    <div class="panel">
+      <h2>B · text/event-stream</h2>
+      <p class="sub">GET /api/lecturas/stream</p>
+      <button id="bB">Abrir el stream</button>
+      <ol id="listaB"></ol>
+      <p class="estado" id="estadoB">en reposo</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function pinta(lista, l) {
+  const li = document.createElement('li');
+  li.className = 'nueva';
+  const cal = l.celsius > 30 ? ' hot' : '';
+  li.innerHTML = '<span>#' + l.numero + ' &middot; ' + l.hora + '</span>' +
+                 '<span class="t' + cal + '">' + l.celsius.toFixed(1) + ' &deg;C</span>';
+  lista.appendChild(li);
+}
+
+document.getElementById('bA').addEventListener('click', async function () {
+  const b = this, lista = document.getElementById('listaA'), est = document.getElementById('estadoA');
+  b.disabled = true; lista.innerHTML = '';
+  const t0 = performance.now();
+  est.innerHTML = '<span class="spin">&#9696;</span> esperando&hellip; el navegador no recibe NADA todavia';
+  try {
+    const datos = await fetch('/api/lecturas').then(r => r.json());
+    const seg = ((performance.now() - t0) / 1000).toFixed(1);
+    datos.forEach(l => pinta(lista, l));
+    est.textContent = 'llegaron las ' + datos.length + ' de golpe, tras ' + seg + ' s de silencio';
+  } catch (e) {
+    est.textContent = 'error: ' + e.message;
+  }
+  b.disabled = false;
+});
+
+let es = null;
+document.getElementById('bB').addEventListener('click', function () {
+  const b = this, lista = document.getElementById('listaB'), est = document.getElementById('estadoB');
+  if (es) { es.close(); es = null; b.textContent = 'Abrir el stream'; est.textContent = 'cerrado'; return; }
+  lista.innerHTML = ''; b.textContent = 'Cerrar el stream';
+  const t0 = performance.now();
+  es = new EventSource('/api/lecturas/stream');
+  es.onmessage = function (ev) {
+    const l = JSON.parse(ev.data);
+    pinta(lista, l);
+    est.textContent = 'recibidas ' + lista.children.length +
+                      ' \u00b7 ultima a los ' + ((performance.now() - t0) / 1000).toFixed(1) + ' s';
+    lista.scrollTop = lista.scrollHeight;
+  };
+  es.onerror = function () {
+    est.textContent = 'el servidor cerro el stream (onComplete tras 20 lecturas)';
+    es.close(); es = null; b.textContent = 'Abrir el stream';
+  };
+});
+</script>
+</body>
+</html>

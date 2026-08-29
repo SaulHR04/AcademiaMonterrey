@@ -1,0 +1,17 @@
+#
+# JDBC properties
+#
+spring.datasource.url=jdbc:mysql://localhost:3306/employee_directory
+spring.datasource.username=springstudent
+spring.datasource.password=springstudent
+
+#
+# Puerto de esta etapa (01 = 8071, 02 = 8072, 03 = 8073)
+#
+server.port=8071
+
+#
+# Descomenta para ver que filtros de seguridad atraviesa cada request.
+# Es la mejor forma de ENTENDER la cadena de filtros: no la imagines, miralo.
+#
+logging.level.org.springframework.security=DEBUG
