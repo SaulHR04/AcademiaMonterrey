@@ -96,3 +96,29 @@ el sistema al detectar credenciales que no coinciden y querer hacer un POST, com
 Sirve principalmente para problemas con la escalabilidad ya que no guarda nada en la memoria RAM permitiendo asi una eficiencia por el token ya que el sistema solo detecta y verifica el token rapidamente y la procesa sin necesidad de entrar a la base de datos.
 
 -----------------------------------------
+### **2.2 OAUTH2 ** 
+
+Es el estandar de autorización en la cual permite que los recursos protegidas del usuario sean compartidas sin la necesidad de compartir sus credenciales. Permitiendo que el sistema otorge acceso a estos.
+utilizado mayormente en aplicaciones donde te sale para autorizar aplicaciones de terceros como el caso de iniciar sesion por Google o alguna red social, sin la necesidad de que el usuario escriba su usuario y contraseña para el registro o logeo a dicha aplicacion.
+
+### Que pasa si no lo utilizas:
+al no utilizar el protocolo OAUTH2 es decir que al iniciar sesión en un sistema es necesario colocar nuestras credenciales y si estas quedan vulnerables en algun momento nuestras credenciales tambien lo hacen.
+
+### Problema que resuelve:
+Resuelve el problema de que cada aplicación tenga acceso a información fragil de los usuarios, haciendo más sencilla la revocación de permisos y administración de que sistemas puedan utilizarlos.
+
+----------------------------
+En diferencia del JWT en OAUTH2 es la desaparición del end point de inicio de sesión ya que no es extrictamente necesario el contar con el login ya que el sistema no lee ni necesita Usuario o contraseña. Y desaparece el uso de base de datos.
+
+### KeyClock
+```Url
+http://localhost:8090
+ ```
+ Es el servidor donde podemos gestionar los accesos, como un control de usuarios que nos ayuda a evitarnos tener que colocar toda la lógica en código.
+
+ ### De que sirve:
+ implementa Oauth2 además de ofrecer una interfaz grafica donde puedes crear, asignar roles y gestionar permisos a nuestros usuarios.
+ Ofreciendo tambien funciones avanzadas de seguridad ya programadas que nos ahorran tiempo valioso.
+ ![alt text](img/image-5.png)
+
+![alt text](img/image-6.png)
