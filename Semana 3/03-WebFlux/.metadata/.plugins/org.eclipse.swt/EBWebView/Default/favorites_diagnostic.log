@@ -17,3 +17,23 @@
 2026-08-29 03:53:07.565: [INFO] BookmarksLoadDropped droppedNodes=0
 2026-08-29 03:53:07.565: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
 2026-08-29 03:53:16.639: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-30 00:06:33.604: [INFO] CurrentProfilePath: C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 3\03-WebFlux\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-30 00:06:33.604: [INFO] Profiles total count: 1
+2026-08-30 00:06:33.604: [INFO] Profile: name=Perfil 1 path=C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 3\03-WebFlux\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-08-29T03:52:58.687Z
+2026-08-30 00:06:33.604: [INFO] LastUsedProfileDir: C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 3\03-WebFlux\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-30 00:06:33.604: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 3\03-WebFlux\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-08-29T03:52:58.687Z
+2026-08-30 00:06:33.604: [INFO] OnDoneLoading sync enabled: 0
+2026-08-30 00:06:33.604: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-30 00:06:33.604: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-30 00:06:33.604: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-30 00:06:36.092: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-30 00:07:27.479: [INFO] CurrentProfilePath: C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 3\03-WebFlux\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-30 00:07:27.479: [INFO] Profiles total count: 1
+2026-08-30 00:07:27.479: [INFO] Profile: name=Perfil 1 path=C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 3\03-WebFlux\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-08-30T00:06:35.842Z
+2026-08-30 00:07:27.479: [INFO] LastUsedProfileDir: C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 3\03-WebFlux\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-30 00:07:27.479: [INFO] MostRecentlyActiveProfile: name=Perfil 1 path=C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 3\03-WebFlux\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-08-30T00:06:35.842Z
+2026-08-30 00:07:27.479: [INFO] OnDoneLoading sync enabled: 0
+2026-08-30 00:07:27.479: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-30 00:07:27.479: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-30 00:07:27.479: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-30 00:07:30.207: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1

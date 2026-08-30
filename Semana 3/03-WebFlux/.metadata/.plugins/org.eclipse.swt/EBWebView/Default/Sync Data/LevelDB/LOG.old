@@ -1,2 +1,3 @@
-2026/08/28-21:52:58.126 6638 Creating DB C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 3\03-WebFlux\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Sync Data\LevelDB since it was missing.
-2026/08/28-21:52:58.134 6638 Reusing MANIFEST C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 3\03-WebFlux\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Sync Data\LevelDB/MANIFEST-000001
+2026/08/29-18:06:33.590 5204 Reusing MANIFEST C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 3\03-WebFlux\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Sync Data\LevelDB/MANIFEST-000001
+2026/08/29-18:06:33.592 5204 Recovering log #3
+2026/08/29-18:06:33.592 5204 Reusing old log C:\Users\Saul\Desktop\AcademiaMonterrey\Semana 3\03-WebFlux\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Sync Data\LevelDB/000003.log 
