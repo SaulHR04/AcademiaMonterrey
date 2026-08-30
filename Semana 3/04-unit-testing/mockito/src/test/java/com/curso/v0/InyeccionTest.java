@@ -12,21 +12,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-/**
- * EL PARALELO CON EL FRAMEWORK.
- *
- * En produccion, ese constructor de ServiceCalculoImpuesto lo resuelve Spring:
- * busca quien implementa ICalculoComplejo y lo inyecta (el //@Autowired del
- * codigo). En un test no hay contenedor: nadie inyecta nada, y por eso
- * Principal.main() se queda con null.
- *
- * Mockito hace en el test exactamente lo que Spring hara en produccion:
- *
- *     @Mock        -> crea el colaborador  (lo que en prod aporta el tercero)
- *     @InjectMocks -> lo mete por el constructor (lo que en prod hace @Autowired)
- *
- * Misma forma de trabajar, sin arrancar un contenedor y sin esperar al tercero.
- */
+
 @ExtendWith(MockitoExtension.class)
 @DisplayName("Mockito inyecta en el test lo que Spring inyectara en produccion")
 class InyeccionTest {

@@ -10,15 +10,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 
-/**
- * Con un colaborador que no controlamos, lo que hay que probar no es el
- * RESULTADO (es suyo), sino la LLAMADA (es nuestra): que le pasamos los seis
- * argumentos correctos, del tipo correcto, y que le llamamos una sola vez.
- *
- * Esto es lo que sostiene el contrato con el tercero. Si manana su
- * implementacion aparece y algo no cuadra, estos tests dicen de que lado esta
- * el fallo.
- */
+
 @DisplayName("Verificar la llamada, no el resultado")
 class ArgumentosTest {
 
@@ -29,8 +21,7 @@ class ArgumentosTest {
 
 		new ServiceCalculoImpuesto(icc).calcularImpuesto();
 
-		// Sin un solo when(): aqui no nos importa que devuelve, sino que se le
-		// pidio. verify falla si un solo argumento no coincide.
+		
 		verify(icc).ejecutaCalculoComplejo((byte) 30, (char) 100, (short) 1000, 77777, 44444L, 90.90F);
 	}
 
@@ -48,8 +39,7 @@ class ArgumentosTest {
 		ArgumentCaptor<Long> l = ArgumentCaptor.forClass(Long.class);
 		ArgumentCaptor<Float> f = ArgumentCaptor.forClass(Float.class);
 
-		// O TODO son captores, o TODO son valores. Mezclar es un error: ver
-		// TrampaDeMatchersTest.
+	
 		verify(icc).ejecutaCalculoComplejo(b.capture(), ch.capture(), sh.capture(),
 				i.capture(), l.capture(), f.capture());
 
@@ -58,9 +48,7 @@ class ArgumentosTest {
 		assertEquals((short) 1000, sh.getValue());
 		assertEquals(77777, i.getValue());
 
-		// FIJATE: en ServiceCalculoImpuesto se escribe 44444, un literal int.
-		// El parametro es long, asi que Java lo ENSANCHA solo. El captor lo
-		// demuestra: lo que llego al colaborador fue un long.
+		
 		assertEquals(44444L, l.getValue());
 
 		assertEquals(90.90F, f.getValue());
@@ -73,9 +61,7 @@ class ArgumentosTest {
 
 		new ServiceCalculoImpuesto(icc).calcularImpuesto();
 
-		// Si alguien mete el calculo dentro de un bucle o lo repite por
-		// despiste, este test cae. Con la implementacion real no te enterarias:
-		// el resultado seria el mismo, solo que el doble de lento.
+	
 		verify(icc, times(1)).ejecutaCalculoComplejo((byte) 30, (char) 100, (short) 1000,
 				77777, 44444L, 90.90F);
 		verifyNoMoreInteractions(icc);
