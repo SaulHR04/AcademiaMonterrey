@@ -1,0 +1,32 @@
+package base;
+import java.time.Duration;
+import org.openqa.selenium.WebElement;
+
+public abstract class BasePage {
+protected final WebDriver driver;
+protected final WebDriverWait wait;
+
+protected BasePage(WebDriver driver) {
+	this.driver = driver;
+	
+	this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+}
+
+protected WebElement find(By locator) {
+return wait.until(ExpectedConditions.visibiltyOfElementLocated(locator));
+}
+
+protected void click(By locator) {
+	find(locator).click();
+}
+
+protected void write(By locator, String Value) {
+WebElement element = find(locator);
+
+element.clear();
+element.sendKeys(value);
+}
+protected String text(By locator) {
+	return find(locator).getText();
+}
+}

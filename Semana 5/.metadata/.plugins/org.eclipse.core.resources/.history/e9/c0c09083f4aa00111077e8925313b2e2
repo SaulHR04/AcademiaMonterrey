@@ -1,0 +1,33 @@
+package tests;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import pages.HomePage;
+import pages.LoginPage;
+import base.BaseTest;
+public class LoginTest extends BaseTest{
+
+	/*	@Test
+		
+		public void shouldLoginSuccessfully() {
+			LoginPage loginPage = new LoginPage(driver);
+			HomePage homePage = loginPage.login("standard_user", "secret_sauce");
+			Assert.assertEquals(homePage.getProductsTitle(), "Products");
+		
+		}
+	*/
+	@Test 
+	public void AñadirCarritoYRemover() {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.login("standard_user", "secret_sauce");
+
+        HomePage homePage = new HomePage(driver);
+        Assert.assertEquals(homePage.getProductsTitle(), "Products", "No se ingresó correctamente a la tienda.");
+
+        homePage.AgregarCarrito();
+
+        homePage.RemoverCarrito();
+        
+       
+		}
+
+}

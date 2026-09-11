@@ -1,0 +1,33 @@
+package pages;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import base.BasePage;
+public class HomePage extends BasePage {
+	
+	private static final By PRODUCTS_TITLE = By.className("title");
+	private static final By AGREGAR_CARRITO = By.id("add-to-cart-sauce-labs-bolt-t-shirt");
+	
+	private static final By CARRITO_CARD = By.id("shopping_cart_badge");
+	
+	private static final By REMOVER_ITEM = By.id("remove-sauce-labs-backpack");
+
+	public HomePage(WebDriver driver) {
+		super(driver);
+	}
+	public String getProductsTitle() {
+		return text(PRODUCTS_TITLE);
+	}
+	
+public void  AgregarCarrito( ) {
+	click(AGREGAR_CARRITO);
+}
+
+public void  CarritoCard( ) {
+	click(CARRITO_CARD);
+}
+
+
+	
+
+}

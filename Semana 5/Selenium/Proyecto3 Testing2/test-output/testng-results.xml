@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-09-07T17:20:20 CST" name="Default suite" finished-at="2026-09-07T17:20:27 CST" duration-ms="7605">
+    <groups>
+    </groups>
+    <test started-at="2026-09-07T17:20:20 CST" name="Default test" finished-at="2026-09-07T17:20:27 CST" duration-ms="7605">
+      <class name="tests.PimTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.PimTest@6b2ea799]" started-at="2026-09-07T17:20:20 CST" name="setup" finished-at="2026-09-07T17:20:23 CST" duration-ms="3164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="TestPim()[pri:0, instance:tests.PimTest@6b2ea799]" started-at="2026-09-07T17:20:23 CST" name="TestPim" finished-at="2026-09-07T17:20:27 CST" duration-ms="4406" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestPim -->
+      </class> <!-- tests.PimTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
