@@ -264,3 +264,19 @@ Se creó un rol para que AWS CodeDeploy pueda trabajar con las instancias selecc
 ![Rol de CodeDeploy creado](Capturas/4.RolCodeDeploy.PNG)
 
 **Captura 46.** Se creó el rol **taskflow-codedeploy-role**. (Hasta aqui nos dejo la capa gratis que nos ofrece AWS).
+
+### Preguntas
+**¿Por qué el RDS no tiene IP pública, y cómo llega entonces la EC2 a él?**
+si tuviera una ip publica nuestro postgre quedaria expuesto para cualquiera en internet.
+
+**¿Qué habría pasado si dejabas el SSH abierto al mundo?** Si se queda abierto SSH para cualquiera podrian detectar la instancia y entrar robando informacion privada como las credenciales.
+
+**¿Qué midió tu comparación de query contra scan?**  query solamente lee por taskid lo necesario mientras que scan revisa la totalidad de la tabla para filtrar despues.
+
+
+¿En qué hook vive cada comando que el miércoles corriste a mano? 
+vive en los archivos .sh que estan en la carpeta de scripts y su equivalencia es: 
+- Kill :PID:  -  Script: parar.sh
+- Chown - Script: permisos.sh
+- nohup - Script: arrancar.sh
+- probar la api - Script: verificar.sh
